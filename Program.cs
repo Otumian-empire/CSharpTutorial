@@ -11,6 +11,12 @@ class Program
         int[] evenNumbers = new int[5] { 1, 2, 3, 4, 5 };
         Console.WriteLine(evenNumbers[0]);
 
+        Console.WriteLine($"The length of the array is: {evenNumbers.Length}");
+        Console.WriteLine($"The Rank of the array is: {evenNumbers.Rank}");
+        Console.WriteLine($"The Min of the array is: {evenNumbers.Min()}");
+        Console.WriteLine($"The Max of the array is: {evenNumbers.Max()}");
+        Console.WriteLine($"The Sum of the array is: {evenNumbers.Sum()}");
+
 
         /* Person person = new Person();
         person.SayHi();
