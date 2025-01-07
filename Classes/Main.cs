@@ -31,11 +31,11 @@ class MainClass
         dan.Dance();
         // ((Man)man).Dance();
 
-        System.Console.WriteLine(Convert.ToInt32(Numbers.Zero));
-        System.Console.WriteLine((int)Numbers.Zero);
+        Console.WriteLine(Convert.ToInt32(Numbers.Zero));
+        Console.WriteLine((int)Numbers.Zero);
 
-        System.Console.WriteLine(Convert.ToInt32(Numbers.One));
-        System.Console.WriteLine((int)Numbers.Three);
+        Console.WriteLine(Convert.ToInt32(Numbers.One));
+        Console.WriteLine((int)Numbers.Three);
 
 
 
@@ -44,19 +44,19 @@ class MainClass
         {
             case 1:
 
-                System.Console.WriteLine("Its one");
+                Console.WriteLine("Its one");
                 break;
 
             case 2:
-                System.Console.WriteLine("Its 2");
+                Console.WriteLine("Its 2");
                 return;
             default:
-                System.Console.WriteLine("hmm");
+                Console.WriteLine("hmm");
                 Environment.Exit(0);
                 break;
         }
 
-        System.Console.WriteLine(x);
+        Console.WriteLine(x);
 
     }
 

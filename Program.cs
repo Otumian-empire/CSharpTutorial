@@ -1,4 +1,4 @@
-﻿namespace CSharpTutorial;
+namespace CSharpTutorial;
 class Program
 {
     static void Main(string[] args)
@@ -50,7 +50,7 @@ class Program
         // Arrays();
 
         // oop
-        Classes();
+        // Classes();
 
 
     }
@@ -69,46 +69,46 @@ class Program
             Console.WriteLine(intArray);
         }
 
-        string[] stringArray1 = new string[] { "firstStr", "secondStr" };
-        string[] stringArray2 = new string[2] { "firstStr", "secondStr" };
-        string[] stringArray3 = new string[2];
-        stringArray3 = ["firstStr", "secondStr"];
+    //     string[] stringArray1 = new string[] { "firstStr", "secondStr" };
+    //     string[] stringArray2 = new string[2] { "firstStr", "secondStr" };
+    //     string[] stringArray3 = new string[2];
+    //     stringArray3 = ["firstStr", "secondStr"];
 
-        string[] stringArray4;
-        stringArray4 = new string[] { "1", "2", "3" };
-        // stringArray4 =  { "1", "2", "3" };// will cause error
-        stringArray4 = ["1", "2", "3"];// will cause error
-    }
+    //     string[] stringArray4;
+    //     stringArray4 = new string[] { "1", "2", "3" };
+    //     // stringArray4 =  { "1", "2", "3" };// will cause error
+    //     stringArray4 = ["1", "2", "3"];// will cause error
+    // }
 
-    static void UserInput()
-    {
-        Console.Write("Enter a number: ");
+    // static void UserInput()
+    // {
+    //     Console.Write("Enter a number: ");
 
-        // I don't like how it is done... it seems we have look into tryparse
-        int userInput = Convert.ToInt32(Console.ReadLine());
+    //     // I don't like how it is done... it seems we have look into tryparse
+    //     int userInput = Convert.ToInt32(Console.ReadLine());
 
 
-        Console.Write("\n");
-        Console.WriteLine($"You entered {userInput}");
-    }
+    //     Console.Write("\n");
+    //     Console.WriteLine($"You entered {userInput}");
+    // }
 
-    static void TypeCasting()
-    {
-        // char -> int -> long -> float -> double
-        int intNum = 2;
-        long longNum = intNum;
-        float floatNum = longNum;
-        double doubleNum = longNum;
+    // static void TypeCasting()
+    //     {
+    //         // char -> int -> long -> float -> double
+    //         int intNum = 2;
+    //     long longNum = intNum;
+    //     float floatNum = longNum;
+    //     double doubleNum = longNum;
 
-        Console.WriteLine($"{intNum} is of type {intNum.GetType()}");
-        Console.WriteLine($"{longNum} is of type {longNum.GetType()}");
-        Console.WriteLine($"{floatNum} is of type {floatNum.GetType()}");
-        Console.WriteLine($"{doubleNum} is of type {doubleNum.GetType()}");
+    //     Console.WriteLine($"{intNum} is of type {intNum.GetType()}");
+    //         Console.WriteLine($"{longNum} is of type {longNum.GetType()}");
+    //         Console.WriteLine($"{floatNum} is of type {floatNum.GetType()}");
+    //         Console.WriteLine($"{doubleNum} is of type {doubleNum.GetType()}");
 
-        floatNum = (float)longNum;
-        Console.WriteLine($"{floatNum} is of type {floatNum.GetType()}");
+    //         floatNum = (float) longNum;
+    //     Console.WriteLine($"{floatNum} is of type {floatNum.GetType()}");
 
-        intNum = (int)Convert.ToUInt64(floatNum);
-        // etc
-    }
+    //         intNum = (int) Convert.ToUInt64(floatNum);
+    //     // etc
+    // }
 }
