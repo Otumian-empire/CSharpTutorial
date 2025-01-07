@@ -47,9 +47,17 @@ class Program
         // System.Console.WriteLine("a\b");
 
         // arrays
-        Arrays();
+        // Arrays();
+
+        // oop
+        Classes();
 
 
+    }
+
+    static void Classes()
+    {
+        _ = new MainClass();
     }
 
     static void Arrays()
@@ -70,8 +78,6 @@ class Program
         stringArray4 = new string[] { "1", "2", "3" };
         // stringArray4 =  { "1", "2", "3" };// will cause error
         stringArray4 = ["1", "2", "3"];// will cause error
-
-
     }
 
     static void UserInput()
