@@ -1,4 +1,4 @@
-namespace CSharpTutorial;
+﻿namespace CSharpTutorial;
 class Program
 {
     static void Main(string[] args)
@@ -52,22 +52,143 @@ class Program
         // oop
         // Classes();
 
+        // cert
+        Cert();
 
     }
 
-    static void Classes()
+    static void Cert()
     {
-        _ = new MainClass();
-    }
+        // string strIntVal = "2";
+        // int intStrVal = (int)strIntVal; // Cannot convert type 'string' to 'int'
 
-    static void Arrays()
-    {
-        // int[] intArray = { 1, 2, 3 };
-        int[] intArray = [1, 2, 3]; // using collection expression
-        foreach (var i in intArray)
+        // decimal decVal = 12.34m;
+        // float floVal = 12.34f;
+
+        // string fiveStr = "5";
+        // // int intFiveStr = int.Parse(fiveStr);
+        // int intFiveStr = Convert.ToInt32(fiveStr);
+        // System.Console.WriteLine($"intFiveStr: {intFiveStr}");
+
+        // there is a difference between Convert.ToInt32 and int.Parse
+        // decimal valToConvert = 3.654m;
+        // int intParse = (int)valToConvert;
+        // int intConvert = Convert.ToInt32(valToConvert);
+
+        // System.Console.WriteLine($"intParse: {intParse}, intConvert: {intConvert}");
+        // // intParse: 3, intConvert: 4
+
+        // using try parse
+        /*  if (int.TryParse("12", out int expectedParsedValues))
+         {
+             Console.WriteLine($"expectedParsedValues: {expectedParsedValues}");
+         }
+         else
+         {
+             Console.WriteLine($"expectedParsedValues: {expectedParsedValues}, which is not expected");
+         }
+
+         // to check if the variable will be out of scope of the if else block
+         Console.WriteLine(expectedParsedValues); */
+
+        /*  string[] blackBulls =
+         [
+             "Yami",
+             "Finral",
+             "Magna",
+             "Henry",
+             "zora",
+             "Asta",
+             "luck",
+             "Gordon",
+             "Grey",
+             "Vanessa",
+             "Noelle",
+             "Chummy",
+             "Gouche",
+             "Vice-cap"
+         ];
+         Console.Clear();
+         System.Console.WriteLine("Orginal list");
+         foreach (string knight in blackBulls)
+         {
+             Console.WriteLine(knight);
+         }
+         System.Console.WriteLine($"Size: {blackBulls.Length}"); */
+
+        /* Array.Sort(blackBulls);
+        Console.WriteLine("\n\nSorted list");
+        foreach (string? knight in blackBulls)
         {
-            Console.WriteLine(intArray);
+            Console.WriteLine(knight);
         }
+
+        Array.Reverse(blackBulls);
+        Console.WriteLine("\n\nReversed list");
+        foreach (string? knight in blackBulls)
+        {
+            Console.WriteLine(knight);
+        } */
+
+
+        // clear method, replaces the values with the default of those value
+        /* Array.Clear(blackBulls, 0, 1);
+        System.Console.WriteLine("\n\nNew Orginal list");
+        foreach (string knight in blackBulls)
+        {
+            Console.WriteLine(knight);
+        }
+        System.Console.WriteLine($"Size: {blackBulls.Length}");
+
+        // resize, actually does the removing
+        Array.Resize(ref blackBulls, blackBulls.Length - 1);
+        System.Console.WriteLine("\n\nResized Orginal list");
+        foreach (string knight in blackBulls)
+        {
+            Console.WriteLine(knight);
+        }
+        System.Console.WriteLine($"Size: {blackBulls.Length}"); */
+
+        /*  var someStr = "N,a,m,e";
+         // var splitSomeStr = someStr.Split(",");
+         var splitSomeStr = someStr.ToCharArray();// this one will make use of the ,
+         foreach (var item in splitSomeStr)
+         {
+             System.Console.WriteLine(item);
+         } */
+
+        string pangram = "The quick brown fox jumps over the lazy dog";
+        // ehT kciuq nworb xof spmuj revo eht yzal god
+
+        var spliPangram = pangram.Split(" ");
+
+        for (int i = 0; i < spliPangram.Length; i++)
+        {
+            spliPangram[i] = string.Join("", spliPangram[i].ToCharArray().Reverse());
+        }
+
+        string newPangram = string.Join(" ", spliPangram);
+        System.Console.WriteLine(newPangram);
+
+
+
+
+
+    }
+
+    // static void Classes()
+    // {
+    //     _ = new MainClass();
+    // }
+
+    // static void Arrays()
+    // {
+    //     // int[] intArray = { 1, 2, 3 };
+    //     int[] intArray = [1, 2, 3]; // using collection expression
+    //     foreach (var i in intArray)
+    //     {
+    //         Console.WriteLine(intArray);
+    //     }
 
     //     string[] stringArray1 = new string[] { "firstStr", "secondStr" };
     //     string[] stringArray2 = new string[2] { "firstStr", "secondStr" };
